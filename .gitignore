@@ -1,0 +1,93 @@
+# .gitignore for the Horizon Scanner Project
+
+# -------------------------------------------------------------------
+# GENERAL - Operating System & Editor Files
+# -------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.swp
+
+# VS Code / Cursor specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+.cursor/
+
+# -------------------------------------------------------------------
+# SENSITIVE - Credentials & Environment Variables
+# -------------------------------------------------------------------
+
+# Ignore all .env files
+.env
+.env.*
+
+# But DO commit an example file
+!/.env.example
+
+# Cloudflare Tunnel credentials if stored locally
+*.pem
+
+# -------------------------------------------------------------------
+# GOOGLE APPS SCRIPT (CLASP)
+# -------------------------------------------------------------------
+
+# CRITICAL: This file contains your OAuth credentials and script IDs.
+# NEVER commit this file to a public repository.
+# It should be located inside 'services/gcp-apps-script/'
+**/.clasp.json
+
+# -------------------------------------------------------------------
+# NODE.JS / NPM
+# (For development dependencies like 'clasp' itself)
+# -------------------------------------------------------------------
+
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+.npm
+.pnp.*
+
+# -------------------------------------------------------------------
+# DENO
+# -------------------------------------------------------------------
+
+# Deno does not use node_modules, but you might have local build artifacts.
+# The lock file is often committed, but can be ignored in solo projects.
+# deno.lock
+
+# -------------------------------------------------------------------
+# N8N
+# -------------------------------------------------------------------
+
+# If running a local N8N instance with a file-based database,
+# the .n8n directory contains the database and credentials.
+# This should be ignored. Your manual JSON backups are safe.
+.n8n/
+
+# -------------------------------------------------------------------
+# LOGS & TEMPORARY FILES
+# -------------------------------------------------------------------
+
+logs/
+*.log
+*.tmp
+*.temp
