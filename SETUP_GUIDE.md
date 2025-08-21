@@ -33,7 +33,7 @@ This guide details the steps to configure all the necessary services for the pro
    * Ensure your self-hosted instance is running and accessible via your Cloudflare Tunnel URL.  
    * Create two new workflows: "Horizon Scanner \- Ingestion" and "Horizon Scanner \- Worker".  
    * **Ingestion Workflow:**  
-     * Add a Webhook node. The production URL will be https://n8n-groupon.titansdev.es/webhook/....  
+     * Add a Webhook node. The production URL will be your N8N public URL, e.g., https://n8n.example.com/webhook/....  
      * Add a RabbitMQ (Send) node. Configure it with your CloudAMQP URL.  
    * **Worker Workflow (Standard Approach):**  
      * Add a RabbitMQ Trigger node. Configure it to listen to the same queue.  

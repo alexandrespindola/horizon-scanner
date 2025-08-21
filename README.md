@@ -2,15 +2,15 @@
 
 ## **Project Goal (Personal Context)**
 
-The primary objective is to develop an elite portfolio project within 3 days for the Groupon technical interview. The project must demonstrate not only technical proficiency in the requested stack but also proactive business acumen, senior software architecture thinking, and a deep alignment with the company's "AI-First" philosophy.
+The primary objective is to develop an elite portfolio project within 3 days. The project must demonstrate not only technical proficiency in the chosen stack but also proactive business acumen, senior software architecture thinking, and a deep alignment with an "AI-First" philosophy.
 
-## **Relevance to the Job Description (Groupon \- JS Automation Developer)**
+## **Relevance to the Role (JS Automation Developer)**
 
 This project directly addresses the core requirements and culture described in the job posting:
 
 * **AI-First:** It utilizes a chain of multiple AI models for tasks that go beyond simple classification, focusing on predictive analysis.  
 * **Autonomy and Impact:** It's a proactive system that creates new revenue opportunities, demonstrating the significant impact a single individual can have.  
-* **Tech Stack:** It cohesively integrates Google Apps Script, N8N, AI (Gemini), and external APIs (Jira), exactly as requested.  
+* **Tech Stack:** It cohesively integrates Google Apps Script, N8N, AI (Gemini), and external APIs (Jira), following industry best practices.  
 * **Problem-Solving:** It focuses on solving a strategic business problem (new partner acquisition) rather than just a technical task.
 
 ## **App Objective (The "What")**

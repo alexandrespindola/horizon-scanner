@@ -40,4 +40,4 @@ Today's goal is to tie all the pieces together, perform end-to-end testing, and 
   * Create a clear architecture diagram that emphasizes the AI Agent core.  
   * Practice explaining the data flow, focusing on **how the Agent dynamically selects tools**.  
   * Anticipate technical questions about agent reliability, prompt engineering, and the trade-offs of an agent-based vs. a linear workflow.  
-* **End of Day Goal:** Have a functional prototype and a cohesive, impactful presentation ready for the technical interview.
+* **End of Day Goal:** Have a functional prototype and a cohesive, impactful presentation ready for portfolio showcase.

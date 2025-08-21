@@ -18,7 +18,7 @@ This system is designed based on the following modern software engineering princ
    * **Trigger:** An onOpen() function creates the custom menu. The menu function collects data from the active row and makes a UrlFetchApp.fetch() call to the N8N Ingestion webhook.  
    * **Feedback:** A second function, published as a Web App (doPost(e)), receives the final call from the N8N Worker to update the mission status in the spreadsheet.  
 3. **N8N (Decoupled Workflows):**  
-   * **Setup:** A self-hosted instance running locally, made publicly accessible and secure through a **Cloudflare Tunnel** at https://n8n-groupon.titansdev.es/.  
+   * **Setup:** A self-hosted instance running locally, made publicly accessible and secure through a **Cloudflare Tunnel** at https://n8n.example.com/.  
    * **Workflow 1 (Ingestion):** Extremely lightweight. It receives the webhook from Apps Script, validates the data, and publishes a message to the RabbitMQ queue. It is the system's entry point.  
    * **Workflow 2 (Worker):** The workhorse. It is triggered by new messages in the RabbitMQ queue. It orchestrates the entire chain of calls: data collection, normalization, AI analysis, querying Supabase, and creating the task in Jira.  
 4. **RabbitMQ (Message Queue):**  
@@ -32,7 +32,7 @@ This system is designed based on the following modern software engineering princ
    * **Function 3 (Generation):** Acts as a "virtual sales analyst" to write the final briefing for the Jira ticket.  
 7. **Supabase \+ pgvector (The Smart Memory):**  
    * **Function:** It not only stores data but also the semantic "meaning" of that data through embeddings.  
-   * **Table 1 (existing\_offer\_categories):** id, category\_name, category\_embedding (vector). This table is pre-populated with Groupon's existing offer categories.  
+   * **Table 1 (existing\_offer\_categories):** id, category\_name, category\_embedding (vector). This table is pre-populated with existing marketplace offer categories.  
    * **Table 2 (detected\_trends):** id, trend\_name, source\_urls (jsonb), trend\_embedding (vector), processed\_at.  
    * **The Magic Query (pgvector):** The N8N Worker executes a query that finds the trend\_embedding with the largest cosine distance (lowest similarity) from all existing category\_embedding.  
 8. **Jira (The Final Action):**  
